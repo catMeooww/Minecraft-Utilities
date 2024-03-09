@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Minecraft Utilities</title>
+    <link rel="icon" href="assets/redstone.png" type="image/png">
+    <link rel="stylesheet" href="general.css">
+</head>
+
+<body background="assets/World Background.jpg">
+    <div id="bar">
+        <h1>Select a World</h1>
+        <hr>
+        <h3>Select a world to use this functionalities</h3>
+        <br>
+        <div id="logged-user">
+            <h3>User:</h3>
+            <h3 id="logged-name">User Name</h3>
+            <button class="mcb-green" onclick="setuser()">Switch</button>
+        </div>
+
+    </div>
+    <div id="WorldSect">
+        <div>
+            <img src="assets/grass.png" style="width: 50px;">
+            <h3>World Name</h3>
+        </div>
+        <center>
+            <input class="mcb-green" type="text" placeholder="My-World" id="World-Name">
+            <button class="mcb-green" onclick="joinWorld()">Access</button>
+            <br>
+            <p>Dont use spaces</p>
+        </center>
+    </div>
+    <script>
+        var userName = localStorage.getItem("user");
+        if (userName == undefined) {
+            setuser();
+        } else {
+            document.getElementById("logged-name").innerHTML = userName;
+        }
+
+        function joinWorld() {
+            worldName = document.getElementById("World-Name").value;
+            if (!worldName == "") {
+                localStorage.setItem("world", worldName);
+                window.location = "worldboard.html";
+            }
+        }
+
+        function setuser() {
+            window.location = "login.html";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Minecraft Utilities - user login</title>
+    <link rel="icon" href="assets/redstone.png" type="image/png">
+    <link rel="stylesheet" href="general.css">
+</head>
+
+<body background="assets/login-background.png" style="background-size: cover; text-align: center;">
+    <h1>Minecraft Utilities</h1>
+    <h2>Log - in</h2>
+    <br>
+    <br>
+    <input id="username" type="text"
+        style="background-color: black; border: 5px ridge green; width: 70%; color: aliceblue; text-align: center;">
+    <br>
+    <br>
+    <button onclick="redirect()"
+        style="background-color: purple; border: 5px ridge green; width: 70%; color: aliceblue; text-align: center;">Log-in</button>
+    <script>
+        function redirect() {
+            name = document.getElementById("username").value;
+            if (!name == "") {
+              localStorage.setItem("user",name);
+              window.location = "index.html";
+            }
+        }
+    </script>
+</body>
+
+</html>

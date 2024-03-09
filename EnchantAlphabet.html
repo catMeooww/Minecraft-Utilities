@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <title>Minecraft Utilities</title>
+    <link rel="icon" href="assets/redstone.png" type="image/png">
+    <link rel="stylesheet" href="general.css">
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body background="assets/Wood Background.jpg" onload="loadUi(1)">
+    <div id="bar">
+        <h1 id="WorldBarName">World-Placeholder</h1>
+        <hr>
+        <button class="mcb-option" onclick="redirect(1)">World Map</button>
+        <button class="mcb-option" onclick="redirect(2)">Customization</button>
+        <button class="mcb-option" onclick="redirect(3)">Crafting Guide</button>
+        <button class="mcb-option-selected" onclick="redirect(0)">Enchantment Table</button>
+        <button class="mcb-option" onclick="redirect(5)">Chat</button>
+    </div>
+    <div id="mainbody">
+        <center>
+            <h1>Enchantment Table Alphabet</h1>
+            <hr>
+        </center>
+        <div>
+            <button class="translate-keyboard" onclick="addLetter('A')">
+                <h1 class="default-minecraft">A</h1>
+                <h3 class="Galactic">A</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('B')">
+                <h1 class="default-minecraft">B</h1>
+                <h3 class="Galactic">B</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('C')">
+                <h1 class="default-minecraft">C</h1>
+                <h3 class="Galactic">C</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('D')">
+                <h1 class="default-minecraft">D</h1>
+                <h3 class="Galactic">D</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('E')">
+                <h1 class="default-minecraft">E</h1>
+                <h3 class="Galactic">E</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('F')">
+                <h1 class="default-minecraft">F</h1>
+                <h3 class="Galactic">F</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('G')">
+                <h1 class="default-minecraft">G</h1>
+                <h3 class="Galactic">G</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('H')">
+                <h1 class="default-minecraft">H</h1>
+                <h3 class="Galactic">H</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('I')">
+                <h1 class="default-minecraft">I</h1>
+                <h3 class="Galactic">I</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('J')">
+                <h1 class="default-minecraft">J</h1>
+                <h3 class="Galactic">J</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('K')">
+                <h1 class="default-minecraft">K</h1>
+                <h3 class="Galactic">K</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('L')">
+                <h1 class="default-minecraft">L</h1>
+                <h3 class="Galactic">L</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('M')">
+                <h1 class="default-minecraft">M</h1>
+                <h3 class="Galactic">M</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('N')">
+                <h1 class="default-minecraft">N</h1>
+                <h3 class="Galactic">N</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('O')">
+                <h1 class="default-minecraft">O</h1>
+                <h3 class="Galactic">O</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('P')">
+                <h1 class="default-minecraft">P</h1>
+                <h3 class="Galactic">P</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('Q')">
+                <h1 class="default-minecraft">Q</h1>
+                <h3 class="Galactic">Q</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('R')">
+                <h1 class="default-minecraft">R</h1>
+                <h3 class="Galactic">R</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('S')">
+                <h1 class="default-minecraft">S</h1>
+                <h3 class="Galactic">S</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('T')">
+                <h1 class="default-minecraft">T</h1>
+                <h3 class="Galactic">T</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('U')">
+                <h1 class="default-minecraft">U</h1>
+                <h3 class="Galactic">U</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('V')">
+                <h1 class="default-minecraft">V</h1>
+                <h3 class="Galactic">V</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('W')">
+                <h1 class="default-minecraft">W</h1>
+                <h3 class="Galactic">W</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('X')">
+                <h1 class="default-minecraft">X</h1>
+                <h3 class="Galactic">X</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('Y')">
+                <h1 class="default-minecraft">Y</h1>
+                <h3 class="Galactic">Y</h3>
+            </button>
+            <button class="translate-keyboard" onclick="addLetter('Z')">
+                <h1 class="default-minecraft">Z</h1>
+                <h3 class="Galactic">Z</h3>
+            </button>
+            <span class="translate-keyboard-functional">
+                <button class="translate-keyboard" onclick="addLetter(' ')">
+                    <h2 class="default-minecraft">space</h2>
+                    <h4 class="Galactic">[ ]</h3>
+                </button>
+
+                <button class="translate-keyboard" onclick="addLetter('-')">
+                    <h2 class="default-minecraft">back</h2>
+                    <h4 class="Galactic">[-]</h3>
+                </button>
+            </span>
+        </div>
+        <h1 id="Galactic-Translated"></h1>
+        <h3 id="Galactic-NTranslated"></h3>
+    </div>
+</body>
+
+</html>

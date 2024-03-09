@@ -1,0 +1,169 @@
+<html>
+
+<head>
+    <title>MINECRAFT UTILITIES POTION MAKER</title>
+    <style>
+        @font-face {
+            font-family: Minecraft;
+            src: url(../Minecraft.ttf);
+        }
+
+        body {
+            font-family: Minecraft;
+        }
+
+        .resource-selector img {
+            width: 50px;
+        }
+
+        .resource-selector {
+            border: 4px green ridge;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body background="swamp.png">
+    <center>
+        <br><br><br>
+        <div style="background-color: aliceblue;border: 10px black ridge;width: 70%;display: flex;">
+            <div id="brewing" style="width: 40%; float: left;">
+                <p id="sequence">Water Bottle, Nether Wart</p>
+                <img src="brewing.png">
+                <h3 id="result">awkward potion</h3>
+            </div>
+            <div id="itens" style=" float: right;width: 50%;">
+                <h1>Potion Maker</h1>
+                <button class="resource-selector" onclick="resource(1)"><img src="resources/blaze.png"></button>
+                <button class="resource-selector" onclick="resource(2)"><img src="resources/carrot.png"></button>
+                <button class="resource-selector" onclick="resource(3)"><img src="resources/ghast.png"></button>
+                <button class="resource-selector" onclick="resource(4)"><img src="resources/magma.png"></button>
+                <button class="resource-selector" onclick="resource(5)"><img src="resources/melon.png"></button>
+                <button class="resource-selector" onclick="resource(6)"><img src="resources/phantom.png"></button>
+                <button class="resource-selector" onclick="resource(7)"><img src="resources/pufferfish.png"></button>
+                <button class="resource-selector" onclick="resource(8)"><img src="resources/rabbitfoot.png"></button>
+                <button class="resource-selector" onclick="resource(9)"><img src="resources/spidereye.png"></button>
+                <button class="resource-selector" onclick="resource(10)"><img src="resources/spidereye_2.png"></button>
+                <button class="resource-selector" onclick="resource(11)"><img src="resources/sugar.png"></button>
+                <button class="resource-selector" onclick="resource(12)"><img src="resources/turtle.png"></button>
+                <button class="resource-selector" onclick="location.reload()"><img src="resources/return.png"></button>
+            </div>
+            <script>
+                var potion = "awkward";
+                var list = document.getElementById("sequence");
+                var result = document.getElementById("result");
+                function resource(id) {
+                    if (id == 1) {
+                        if (potion == "awkward") {
+                            potion = "strength";
+                            list.innerHTML += ", blaze powder";
+                            result.innerHTML = "potion of strength";
+                        }
+                    }
+                    if (id == 2) {
+                        if (potion == "awkward") {
+                            potion = "night_vision";
+                            list.innerHTML += ", golden carrot";
+                            result.innerHTML = "potion of night vision";
+                        }
+                    }
+                    if (id == 3) {
+                        if (potion == "awkward") {
+                            potion = "regeneration";
+                            list.innerHTML += ", ghast tear";
+                            result.innerHTML = "potion of regeneration";
+                        }
+                    }
+                    if (id == 4) {
+                        if (potion == "awkward") {
+                            potion = "fire_resistence";
+                            list.innerHTML += ", magma cream";
+                            result.innerHTML = "potion of fire resistence";
+                        }
+                    }
+                    if (id == 5) {
+                        if (potion == "awkward") {
+                            potion = "healing";
+                            list.innerHTML += ", glistering melon";
+                            result.innerHTML = "potion of healing";
+                        }
+                    }
+                    if (id == 6) {
+                        if (potion == "awkward") {
+                            potion = "slow_falling";
+                            list.innerHTML += ", phantom membrane";
+                            result.innerHTML = "potion of slow falling";
+                        }
+                    }
+                    if (id == 7) {
+                        if (potion == "awkward") {
+                            potion = "water_breathing";
+                            list.innerHTML += ", pufferfish";
+                            result.innerHTML = "potion of water breathing";
+                        }
+                    }
+                    if (id == 8) {
+                        if (potion == "awkward") {
+                            potion = "leaping";
+                            list.innerHTML += ", rabbits foot";
+                            result.innerHTML = "potion of leaping";
+                        }
+                    }
+                    if (id == 9) {
+                        if (potion == "awkward") {
+                            potion = "poison";
+                            list.innerHTML += ", spider eye";
+                            result.innerHTML = "potion of poison";
+                        }
+                    }
+                    if (id == 10) {
+                        if (potion == "awkward") {
+                            potion = "weakness";
+                            list.innerHTML += ", fermented spider eye";
+                            result.innerHTML = "potion of weakness";
+                        }
+                        if (potion == "swiftness" || potion == "leaping") {
+                            potion = "slowness";
+                            list.innerHTML += ", fermented spider eye";
+                            result.innerHTML = "potion of slowness";
+                        }
+                        if (potion == "healing" || potion == "poison") {
+                            potion = "harming";
+                            list.innerHTML += ", fermented spider eye";
+                            result.innerHTML = "potion of harming";
+                        }
+                        if (potion == "night_vision") {
+                            potion = "invisibility";
+                            list.innerHTML += ", fermented spider eye";
+                            result.innerHTML = "potion of invisibility";
+                        }
+                    }
+                    if (id == 11) {
+                        if (potion == "awkward") {
+                            potion = "swiftness";
+                            list.innerHTML += ", sugar";
+                            result.innerHTML = "potion of swiftness";
+                        }
+                    }
+                    if (id == 12) {
+                        if (potion == "awkward") {
+                            potion = "turtle";
+                            list.innerHTML += ", turtle shell";
+                            result.innerHTML = "potion of turtle master";
+                        }
+                    }
+                }
+
+                function redirect() {
+                    window.location = "https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/7b/Minecraft_brewing_en.png/revision/latest/scale-to-width-down/1000?cb=20231102221116";
+                }
+            </script>
+        </div>
+        <br><br><br><br>
+        <div style="border: wheat 5px ridge;width: 60%;">
+            <img style="cursor: zoom-in;width: 100%;" onclick="redirect()" src="Minecraft_brewing.webp">
+        </div>
+    </center>
+</body>
+
+</html>

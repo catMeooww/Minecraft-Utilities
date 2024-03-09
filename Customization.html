@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Minecraft Utilities</title>
+    <link rel="icon" href="assets/redstone.png" type="image/png">
+    <link rel="stylesheet" href="general.css">
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body background="assets/Wood Background.jpg" onload="loadUi(1)">
+    <div id="bar">
+        <h1 id="WorldBarName">World-Placeholder</h1>
+        <hr>
+        <button class="mcb-option" onclick="redirect(1)">World Map</button>
+        <button class="mcb-option-selected" onclick="redirect(0)">Customization</button>
+        <button class="mcb-option" onclick="redirect(3)">Crafting Guide</button>
+        <button class="mcb-option" onclick="redirect(4)">Enchantment Table</button>
+        <button class="mcb-option" onclick="redirect(5)">Chat</button>
+    </div>
+    <div id="mainbody">
+        <center>
+            <h1>Customization</h1>
+            <hr>
+            <div>
+                <button class="iframe-select" onclick="customization_frame(1)"><img src="assets/chestplate.png"></button>
+                <button class="iframe-select" onclick="customization_frame(2)"><img src="assets/White_Banner.png"></button>
+                <button class="iframe-select" onclick="customization_frame(3)"><img src="assets/steve.png"></button>
+            </div>
+            <p>Credits: <a id="customization_credits" href="https://armortrims.com/">Armor Trims</a></p>
+        </center>
+        <div>
+            <iframe style="border: 5px green ridge;" id="iframing" width="97%" height="80%" src="https://armortrims.com/"></iframe>
+        </div>
+        <br>
+    </div>
+</body>
+
+</html>

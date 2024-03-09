@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Minecraft Utilities</title>
+    <link rel="icon" href="assets/redstone.png" type="image/png">
+    <link rel="stylesheet" href="general.css">
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body background="assets/Wood Background.jpg" onload="loadChat()">
+    <div id="bar">
+        <h1 id="WorldBarName">World-Placeholder</h1>
+        <hr>
+        <button class="mcb-option" onclick="redirect(1)">World Map</button>
+        <button class="mcb-option" onclick="redirect(2)">Customization</button>
+        <button class="mcb-option" onclick="redirect(3)">Crafting Guide</button>
+        <button class="mcb-option" onclick="redirect(4)">Enchantment Table</button>
+        <button class="mcb-option-selected" onclick="redirect(0)">Chat</button>
+    </div>
+    <div id="mainbody">
+        <center>
+            <h1>World Chat</h1>
+            <hr>
+            <div id="chat-page">
+                <h1 id="chat-title">General World Chat</h1><span>
+                    <button style="background-color: rgba(0, 0, 0, 0);" onclick="changeChatName()">
+                        <img class="chat-icon" src="assets/feather.png">
+                    </button>
+                </span>
+                <br><br>
+                <hr>
+                <div id="chat-output">
+                    <h3 class="server-msg">Loading Data</h3>
+                </div>
+                <br><br><br><br>
+            </div>
+            <div id="send-to-chat">
+                <p>Join the conversation</p>
+                <input id="chat-sender" type="text">
+                <button class="mcb-green" onclick="sendchat()">Send</button>
+            </div>
+        </center>
+    </div>
+</body>
+
+</html>

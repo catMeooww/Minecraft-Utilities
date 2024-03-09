@@ -1,0 +1,199 @@
+@font-face {
+    font-family: Minecraft;
+    src: url(Minecraft.ttf);
+}
+@font-face {
+    font-family: Galactic;
+    src: url(Minecraft_Galactic.ttf);
+}
+
+body{
+    font-family: Minecraft;
+    color: aliceblue;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bar{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    background-image: url("assets/StoneBar.png");
+    width:30%;
+    height: 100%;
+    text-align: center;
+    border: black ridge 5px;
+}
+
+#WorldSect{
+    position: fixed;
+    top:40%;
+    left: 50%;
+    border:ridge wheat 5px;
+    width: 30%;
+    padding: 20px;
+}
+
+#logged-user{
+    text-align: left;
+    position: absolute;
+    left: 3px;
+    bottom: 5px;
+}
+
+#WorldSect h3{
+position: relative;
+width: 200px;
+top: -55px;
+left:140px
+}
+
+#WorldSect img{
+    position: relative;
+    left: 0px;
+}
+
+.mcb-green{
+  background-color: greenyellow;
+  border: green ridge 5px;
+}
+
+.mcb-option{
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.400);
+    border: ridge 6px black;
+    width: 300px;
+    cursor: pointer;
+    font-family: Minecraft;
+    color: aliceblue;
+    font-size: 20px;
+}
+.mcb-option:hover{
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.400);
+    border: ridge 6px cyan;
+    width: 300px;
+    cursor: pointer;
+    font-family: Minecraft;
+    color: aliceblue;
+    font-size: 20px;
+}
+.mcb-option-selected{
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.400);
+    border: ridge 6px greenyellow;
+    width: 300px;
+    cursor: pointer;
+    font-family: Minecraft;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+#mainbody{
+    float: right;
+    width: 68%;
+}
+
+.iframe-select{
+    border: ridge green 5px;
+    background-color: black;
+}
+.iframe-select img{
+    width: 50px;
+    height: 50px;
+}
+
+
+.translate-keyboard{
+    width: 70px;
+    height: 70px;
+    border: green outset 3px;
+    background-color: black;
+    color: aliceblue;
+}
+.translate-keyboard-functional{
+    display:inline-flex;
+}
+.Galactic{
+    font-family: Galactic;
+    position: relative;
+    top:-15px;
+    right: -25px;
+    z-index: 10px;
+}
+.default-minecraft{
+    font-family: Minecraft;
+}
+#Galactic-Translated{
+    font-family: Galactic;
+    letter-spacing: 2px;
+}
+
+#chat-page{
+    width: 90%;
+    background-image: url("assets/StoneBar.png");
+    border: 5px white ridge;
+    height: 200px;
+}
+
+.chat-icon{
+    width: 50px;
+    height: 50px;
+    display: inline;
+}
+
+#chat-title{
+    width: 80%;
+    float: left;
+}
+
+.server-msg{
+    background-color: greenyellow;
+    border: 2px outset greenyellow;
+    width: 90%;
+}
+
+.others-msg{
+    background-color: cadetblue;
+    border: 2px outset cadetblue;
+    float: left;
+}
+.mines-msg{
+    background-color: wheat;
+    border: 2px outset wheat;
+    float: right;
+}
+
+.mines-msg,.others-msg{
+    max-width: 60%;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 1px;
+    line-height: 16px;
+}
+.mines-msg,.others-msg h3{
+    word-break: break-all;
+}
+
+#send-to-chat{
+    z-index: 10px;
+    position: fixed;
+    bottom: 0px;
+    left: 30.5%;
+    background-color: black;
+    border-top: 5px green ridge;
+    width: 70%;
+    height: 15%;
+}
+#chat-sender{
+    background-color: darkslategrey;
+    border: 5px goldenrod ridge;
+    font-family: Minecraft;
+    color:cyan;
+    text-shadow: 2px 2px 2px cadetblue;
+}
+
+#chat-output{
+    width: 99%;
+}
