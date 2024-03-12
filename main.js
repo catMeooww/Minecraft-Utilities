@@ -48,11 +48,14 @@ function redirect(to) {
         window.location = "WorldChat.html";
     } else if (to == 6) {
         window.location = "other.html";
+    }else if(to == 7){
+        window.location = "index.html";
     } else {
         window.location = "worldboard.html";
     }
 }
 
+//customization
 function customization_frame(id) {
     if (id == 1) {
         document.getElementById("iframing").src = "https://armortrims.com/";
@@ -69,6 +72,8 @@ function customization_frame(id) {
     }
 }
 
+
+//crafting guide
 function craft_frame(id) {
     if (id == 1) {
         document.getElementById("iframing").src = "https://www.minecraft-crafting.net/";
@@ -81,6 +86,7 @@ function craft_frame(id) {
     }
 }
 
+//translator
 function addLetter(letter) {
     GTranslated = document.getElementById("Galactic-Translated");
     GNonTranslated = document.getElementById("Galactic-NTranslated");
@@ -99,7 +105,7 @@ function addLetter(letter) {
     }
 }
 
-//server
+//chat
 function getChatData() {
     var chatheight = 200;
     firebase.database().ref("/" + worldName + "/chat").on('value', function (snapshot) {

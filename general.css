@@ -95,6 +95,8 @@ left:140px
     width: 68%;
 }
 
+/*Customization & Craft*/
+
 .iframe-select{
     border: ridge green 5px;
     background-color: black;
@@ -104,6 +106,7 @@ left:140px
     height: 50px;
 }
 
+/*Translator*/
 
 .translate-keyboard{
     width: 70px;
@@ -129,6 +132,8 @@ left:140px
     font-family: Galactic;
     letter-spacing: 2px;
 }
+
+/*Chat*/
 
 #chat-page{
     width: 90%;
@@ -196,4 +201,99 @@ left:140px
 
 #chat-output{
     width: 99%;
+}
+
+/*World Map*/
+
+canvas{
+    float: right;
+    border:gray outset 2px;
+}
+
+.selector-btn{
+    background-color: aliceblue;
+    font-family: Minecraft;
+    border:gray outset 2px;
+}
+
+#HeightP{
+    float: right;
+    width: 100px;
+    background-color: yellow;
+    border:gray outset 2px;
+    font-family: Minecraft;
+}
+
+#newFeature{
+    width: 80%;
+    height: 40px;
+    background-color: darkgray;
+    color: aliceblue;
+    font-family: Minecraft;
+}
+
+#sendingmap{
+    visibility: hidden;
+    background-image: url(assets/StoneBar.png);
+    border: ridge gray 3px;
+    position: fixed;
+}
+.iconsender img{
+    width: 50px;
+    height: 50px;
+}
+.iconsender{
+    border: 5px goldenrod ridge;
+    background-color: black;
+}
+
+.closingbutton{
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    font-size: 20px;
+    font-family: Minecraft;
+    color:aliceblue;
+    text-shadow: 2px 2px 2px darkslategray;
+    float: right;
+}
+
+.closingbutton:hover{
+    border-color: rgba(0, 0, 0, 1);
+    color:red;
+    text-shadow: 2px 2px 2px darkred;
+}
+
+#mapListHeader{
+    background-color: greenyellow;
+    border: 2px greenyellow outset;
+    text-align: center;
+    padding: 2px;
+}
+
+/*Map List*/
+
+.mapListText{
+    width: 90%;
+    background-color: blue;
+    border: 2px cadetblue outset;
+    text-align: center;
+    float: right;
+    padding: 2px;
+}
+.mapListIcon{
+    width: 5%;
+    float: left;
+}
+
+.mapListData{
+    width: 90%;
+    display: inline;
+}
+
+.mapListButton{
+   float: right;
+   border:2px ridge purple;
+   background-color: blueviolet;
+   font-family: Minecraft;
+   color:aliceblue;
 }

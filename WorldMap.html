@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="general.css">
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="p5.min.js"></script>
+    <script src="p5.play.js"></script>
     <script src="main.js"></script>
+    <script src="WorldMapJs.js"></script>
 </head>
 
 <body background="assets/Wood Background.jpg" onload="loadUi(1)">
@@ -20,12 +23,66 @@
         <button class="mcb-option" onclick="redirect(5)">Chat</button>
     </div>
     <div id="mainbody">
+        <div id="sendingmap">
+            <button class="closingbutton" onclick="closesender()">X</button>
+            <center>
+                <h1>Send to Map</h1>
+                <input id="newFeature"><br>
+                <p>Coordinates</p>
+                <input id="send-x" placeholder="x" type="number">
+                <input id="send-z" placeholder="z" type="number">
+                <br>
+                <hr>
+                <p>HEIGHT</p>
+                <button onclick="heightsend(1)"
+                    style="background-color: green;border: ridge chartreuse 3px;">SURFACE</button>
+                <button onclick="heightsend(2)"
+                    style="background-color: cadetblue;border: ridge cornflowerblue 3px;">SKY</button>
+                <button onclick="heightsend(3)"
+                    style="background-color: gray;border: ridge black 3px;">UNDERGROUND</button>
+                <p id="heightToSend">surface</p>
+                <br>
+                <hr>
+                <p>ICON</p>
+                <button class="iconsender" onclick="sendicon(1)"><img src="others/mapAssets/biome.png"></button>
+                <button class="iconsender" onclick="sendicon(2)"><img src="others/mapAssets/chest.png"></button>
+                <button class="iconsender" onclick="sendicon(3)"><img src="others/mapAssets/Creeper.png"></button>
+                <button class="iconsender" onclick="sendicon(4)"><img src="others/mapAssets/grass.png"></button>
+                <button class="iconsender" onclick="sendicon(5)"><img src="others/mapAssets/House.png"></button>
+                <button class="iconsender" onclick="sendicon(6)"><img src="others/mapAssets/Island.png"></button>
+                <button class="iconsender" onclick="sendicon(7)"><img src="others/mapAssets/Pickaxe.png"></button>
+                <button class="iconsender" onclick="sendicon(8)"><img src="others/mapAssets/portal.png"></button>
+                <button class="iconsender" onclick="sendicon(9)"><img src="others/mapAssets/redstone.png"></button>
+                <button class="iconsender" onclick="sendicon(10)"><img src="others/mapAssets/sword.png"></button>
+                <button class="iconsender" onclick="sendicon(11)"><img src="others/mapAssets/Temple.png"></button>
+                <p id="iconToSend">biome</p>
+                <br>
+                <hr>
+                <button class="mcb-green" onclick="sendmap()">Send</button>
+            </center>
+        </div>
         <center>
             <h1>World Map</h1>
             <hr>
         </center>
+        
+        <div style="text-align: center;display: inline;">
+            <button class="selector-btn" onclick="Heightmap(0)">All</button>
+            <button class="selector-btn" onclick="Heightmap(1)">Sky</button>
+            <button class="selector-btn" onclick="Heightmap(2)">Surface</button>
+            <button class="selector-btn" onclick="Heightmap(3)">Underground</button>
+            <button id="HeightP">all</button>
+        </div>
+
         <div id="canvas-handler">
 
+        </div>
+        <br>
+        <br>
+        <button onclick="opensender()" class="mcb-green">Add Item</button>
+        <hr>
+        <div id="map_output">
+            <h3>Loading Data</h3>
         </div>
     </div>
 </body>
