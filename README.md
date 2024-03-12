@@ -8,7 +8,7 @@ Minecraft Utilities is a website with tools to help you in your minecraft world
 Log-in when it appears a log-in screen, in the main screen (index.html) put the world name in the input and join. Now you are in!
 
 ## Functionalities
-- World Map (work in progress)
+- World Map (Save the coordinates of your builds)
 - Customization (iframes to useful websites about customization)
 - Crafting Guide (help you in your crafts)
 - Enchantment Table Translator (translate the enchantment table language)
