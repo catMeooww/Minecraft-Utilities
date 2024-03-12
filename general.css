@@ -11,8 +11,7 @@ body{
     font-family: Minecraft;
     color: aliceblue;
     background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat-y;
 }
 
 #bar{

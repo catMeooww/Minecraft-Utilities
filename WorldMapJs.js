@@ -1,3 +1,4 @@
+//Map Prep
 var mapThings = [];
 var mapHeight = "all";
 
@@ -34,6 +35,8 @@ function setup() {
         canvas.parent(document.getElementById("canvas-handler"));
     }
 }
+
+//MAP
 
 function draw() {
     textFont(MCFont);
