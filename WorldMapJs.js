@@ -12,7 +12,7 @@ function preload() {
     creeper = loadImage("others/mapAssets/Creeper.png");
     grass = loadImage("others/mapAssets/grass.png");
     house = loadImage("others/mapAssets/House.png");
-    island = loadImage("others/mapAssets/island.png");
+    island = loadImage("others/mapAssets/Island.png");
     pickaxe = loadImage("others/mapAssets/Pickaxe.png");
     portal = loadImage("others/mapAssets/portal.png");
     redstone = loadImage("others/mapAssets/redstone.png");
